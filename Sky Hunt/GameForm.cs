@@ -26,10 +26,10 @@ namespace Sky_Hunt
         {
             InitializeComponent();
             DoubleBuffered = true;
-            this.InitializeSettings();
-            this.InitializeMenuOnLoad();
-            this.InitializeControls();
-            this.InitializeTimers();
+            Initializing.InitializeSettings(this);
+            Initializing.InitializeMenuOnLoad(this);
+            Initializing.InitializeControls(this);
+            Initializing.InitializeTimers(this);
         }
     }
 }

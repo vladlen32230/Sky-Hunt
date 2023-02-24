@@ -6,7 +6,7 @@ namespace Sky_Hunt
 {
     public static class Initializing
     {
-        public static void InitializeSettings(this GameForm gameForm)
+        public static void InitializeSettings(GameForm gameForm)
         {
             gameForm.Text = "Sky Hunt";
             gameForm.Icon = Resources.Logo1;
@@ -17,7 +17,7 @@ namespace Sky_Hunt
             MusicPlayer.Play(gameForm.random.Next(3));
         }
 
-        public static void InitializeMenuOnLoad(this GameForm gameForm)
+        public static void InitializeMenuOnLoad(GameForm gameForm)
         {
             gameForm.Load += (s, e) =>
             {
@@ -49,10 +49,10 @@ namespace Sky_Hunt
                 });
             };
 
-            gameForm.InitializeDifficultiesOnLoad();
+            InitializeDifficultiesOnLoad(gameForm);
         }
 
-        private static void InitializeDifficultiesOnLoad(this GameForm gameForm)
+        private static void InitializeDifficultiesOnLoad(GameForm gameForm)
         {
             gameForm.Load += (s, e) =>
             {
@@ -125,7 +125,7 @@ namespace Sky_Hunt
             };
         }
 
-        public static void InitializeTimers(this GameForm gameForm)
+        public static void InitializeTimers(GameForm gameForm)
         {
             gameForm.gameTimer = new Timer()
             {
@@ -147,11 +147,11 @@ namespace Sky_Hunt
                 gameForm.Controls.Add(plane.PictureBox);
             };
 
-            gameForm.InitializeGameEventTimer();
+            InitializeGameEventTimer(gameForm);
             gameForm.reloadTimer.Tick += (s, e) => gameForm.reload = false;
         }
 
-        private static void InitializeGameEventTimer(this GameForm gameForm)
+        private static void InitializeGameEventTimer(GameForm gameForm)
         {
             gameForm.gameTimer.Tick += (s, e) =>
             {
@@ -194,7 +194,7 @@ namespace Sky_Hunt
             };
         }
 
-        public static void InitializeControls(this GameForm gameForm)
+        public static void InitializeControls(GameForm gameForm)
         {
             gameForm.KeyDown += (s, e) =>
             {
