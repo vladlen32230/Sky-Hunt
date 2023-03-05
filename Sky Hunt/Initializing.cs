@@ -29,8 +29,8 @@ namespace Sky_Hunt
                     "Escape to exit" + "\n" +
                     "if (missed==3)" + "\n" +
                     "    GameOver();" + "\n" +
-                    "sigma" + "\n" +
-                    "VLAD KUDRIN THE GENIUS",
+                    "Click on difficulties in right" + "\n" +
+                    "bottom corner to start",
                     Location = new Point(gameForm.Width * 2 / 5, gameForm.Height * 2 / 3),
                     Size = new Size(gameForm.Width / 4, gameForm.Height / 3),
                     BackColor = Color.Transparent,
