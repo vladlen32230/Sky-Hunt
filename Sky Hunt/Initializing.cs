@@ -30,7 +30,7 @@ namespace Sky_Hunt
                     "if (missed==3)" + "\n" +
                     "    GameOver();" + "\n" +
                     "Click on difficulties in right" + "\n" +
-                    "bottom corner to start",
+                    "VLAD KUDRIN THE GENIUS",
                     Location = new Point(gameForm.Width * 2 / 5, gameForm.Height * 2 / 3),
                     Size = new Size(gameForm.Width / 4, gameForm.Height / 3),
                     BackColor = Color.Transparent,
