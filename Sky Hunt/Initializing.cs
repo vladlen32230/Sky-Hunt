@@ -29,7 +29,7 @@ namespace Sky_Hunt
                     "Escape to exit" + "\n" +
                     "if (missed==3)" + "\n" +
                     "    GameOver();" + "\n" +
-                    "gangsta" + "\n" +
+                    "sigma" + "\n" +
                     "VLAD KUDRIN THE GENIUS",
                     Location = new Point(gameForm.Width * 2 / 5, gameForm.Height * 2 / 3),
                     Size = new Size(gameForm.Width / 4, gameForm.Height / 3),
