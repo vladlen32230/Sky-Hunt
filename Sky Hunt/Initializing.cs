@@ -1,4 +1,5 @@
 ﻿using Sky_Hunt.Properties;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -14,13 +15,26 @@ namespace Sky_Hunt
             gameForm.WindowState = FormWindowState.Maximized;
             gameForm.BackgroundImage = Resources.Sky;
             gameForm.BackgroundImageLayout = ImageLayout.Stretch;
-            MusicPlayer.Play(gameForm.random.Next(3));
         }
 
         public static void InitializeMenuOnLoad(GameForm gameForm)
         {
             gameForm.Load += (s, e) =>
             {
+                var music = new PictureBox()
+                {
+                    Image = Resources.music,
+                    Top = gameForm.Height * 15 / 16,
+                    Left = gameForm.Width/8,
+                    Size = new Size(gameForm.Width / 25, gameForm.Height / 15),
+                    BackColor = Color.Transparent,
+                    SizeMode = PictureBoxSizeMode.StretchImage,
+                    Name ="Music"
+                };
+
+                music.Click += (se, ev) => MusicPlayer.Play(gameForm.random.Next(3));
+                gameForm.Controls.Add(music);
+
                 gameForm.Controls.Add(new Label()
                 {
                     Name = "text",

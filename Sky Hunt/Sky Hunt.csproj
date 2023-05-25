@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\HighScore.txt" />
+    <None Include="Resources\music.png" />
     <Content Include="Resources\track1.wav" />
     <Content Include="Resources\track2.wav" />
     <Content Include="Resources\track3.wav" />
