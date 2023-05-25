@@ -32,7 +32,11 @@ namespace Sky_Hunt
                     Name ="Music"
                 };
 
-                music.Click += (se, ev) => MusicPlayer.Play(gameForm.random.Next(3));
+                music.Click += (se, ev) => 
+                { 
+                    MusicPlayer.Play(gameForm.random.Next(3));
+                    gameForm.Controls.Remove(music); 
+                };
                 gameForm.Controls.Add(music);
 
                 gameForm.Controls.Add(new Label()
